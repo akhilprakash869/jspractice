@@ -18,3 +18,12 @@ function b(){
     var s=200;
     console.log(s);
 };
+//lexical environment
+function x(){
+
+    var b=10;
+    y()
+    function y(){
+        console.log(d)
+    }
+}
