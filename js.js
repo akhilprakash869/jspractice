@@ -1,11 +1,25 @@
-var a=10;
-{
-    var a=20;
-    let b=30;
-    const c=40;
-    console.log(a)
-    console.log(b)
-    console.log(c)
-};
-console.log(a);
-// it is the global scope so var is a global scope 
+function a(){
+    var x=30;
+    function b(){
+        var y=40;
+        function c(){
+            console.log(x,y);
+
+        }
+       c();
+    }
+   b();
+}
+a();
+// encapsulation
+class  Person{
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
+    greet(){
+        console.log(`hello ,my name is ${this.name}`);
+    }
+}
+const person1=new Person("Akhil",25);
+person1.greet();
