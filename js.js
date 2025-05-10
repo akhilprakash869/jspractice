@@ -15,3 +15,4 @@ const array=[1,2,3,4,5,6,6,1,2,3];
 const [a,b,c,...d]=array;
 console.log(a);
 console.log(b);
+console.log(c);
