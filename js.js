@@ -1,10 +1,11 @@
-console.log(x)
-add(5,8);
 
-var x=10;
-function add(a,b){
-  var sum =a+b;
-  console.log(sum)
-};
-
-//Hoisting
+//function currying
+function add(x)
+{
+  return function(y){
+    return function(z){
+      return x+y+z;
+    }
+  }
+}
+console.log(add(10)(10)(10))
